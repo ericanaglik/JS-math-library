@@ -19,5 +19,16 @@ Number.prototype.ceil = function() {
 // Challenge 3 - pads Number with x Os before and y Os after
 
 Number.prototype.pad = function(x,y) {
-    
+    let n = this.toString().split('.')
+    result = ""
+    for(let i = 0; i < x - n[0].length; i++) {
+        result += "0"
+    }
+    result += n[0] + "." + n[1]
+    for(let i = 0; i < y - n[1].length; i++) {
+        result += "0"
+    }
+    return result
 }
+
+console.log(31.32.pad(4,4))
