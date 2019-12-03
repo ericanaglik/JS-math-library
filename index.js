@@ -31,4 +31,24 @@ Number.prototype.pad = function(x,y) {
     return result
 }
 
-console.log(31.32.pad(4,4))
+// Challenge 4 - Converts radians to degrees
+
+Number.prototype.degToRad = function() {
+    return this * (Math.PI / 180)
+}
+
+// Challenge 5 - Converts degrees to radians 
+
+Number.prototype.radToDeg = function() {
+    return this * (180 / Math.PI)
+}
+
+// Challenge 6 - Formatting Money 
+
+Number.prototype.toDollars = function() {
+    return "$" + this.toFixed(2)
+}
+
+
+
+
