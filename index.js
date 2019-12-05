@@ -49,6 +49,13 @@ Number.prototype.toDollars = function() {
     return "$" + this.toFixed(2)
 }
 
+// Challenge 7 - Returns the tax amount
+
+Number.prototype.tax = function() {
+    return (this * 0.08) + this
+}
+
+
 
 
 
