@@ -62,5 +62,11 @@ Number.prototype.interest = function(total, year, rate) {
     return parseFloat((total*Math.pow(interest,year)).toFixed(4));
 }
 
+// Challenge 9 - 
+
+Number.prototype.mortgage = function(startingLoanAmount, totalPayments, interestRate) {
+    let interestRatePerMonth = interestRate / 12;
+    return startingLoanAmount * interestRatePerMonth * (Math.pow(1 + interestRatePerMonth, totalPayments)) / (Math.pow(1 + interestRatePerMonth, totalPayments) - 1);
+}
 
 
