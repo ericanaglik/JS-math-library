@@ -62,11 +62,17 @@ Number.prototype.interest = function(total, year, rate) {
     return parseFloat((total*Math.pow(interest,year)).toFixed(4));
 }
 
-// Challenge 9 - 
+// Challenge 9 - Calculate Mortgage 
 
 Number.prototype.mortgage = function(startingLoanAmount, totalPayments, interestRate) {
     let interestRatePerMonth = interestRate / 12;
     return startingLoanAmount * interestRatePerMonth * (Math.pow(1 + interestRatePerMonth, totalPayments)) / (Math.pow(1 + interestRatePerMonth, totalPayments) - 1);
+}
+
+// Challenge 10 - Int to Hex 
+
+Number.prototype.intToHex = function() {
+    return this.toString(16)
 }
 
 
