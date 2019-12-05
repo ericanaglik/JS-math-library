@@ -51,11 +51,16 @@ Number.prototype.toDollars = function() {
 
 // Challenge 7 - Returns the tax amount
 
-Number.prototype.tax = function() {
-    return (this * 0.08) + this
+Number.prototype.tax = function(rate) {
+    return (this * rate) + this
 }
 
+// Challenge 8 - Calculate interest over time
 
+Number.prototype.interest = function(total, year, rate) {
+    var interest = rate/100+1;
+    return parseFloat((total*Math.pow(interest,year)).toFixed(4));
+}
 
 
 
