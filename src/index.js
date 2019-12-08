@@ -34,13 +34,13 @@ Number.prototype.pad = function(x,y) {
 // Challenge 4 - Converts radians to degrees
 
 Number.prototype.degToRad = function() {
-    return this * (Math.PI / 180).toFixed(3)
+    return this * (Math.PI / 180)
 }
 
 // Challenge 5 - Converts degrees to radians 
 
 Number.prototype.radToDeg = function() {
-    return this * (180 / Math.PI).toFixed(3)
+    return (this * (180 / Math.PI))
 }
 
 // Challenge 6 - Formatting Money 
@@ -57,14 +57,14 @@ Number.prototype.tax = function(rate) {
 
 // Challenge 8 - Calculate interest over time
 
-Number.prototype.interest = function(total, year, rate) {
+Number.interest = function(total, year, rate) {
     var interest = rate/100+1;
     return parseFloat((total*Math.pow(interest,year)).toFixed(4));
 }
 
 // Challenge 9 - Calculate Mortgage 
 
-Number.prototype.mortgage = function(startingLoanAmount, totalPayments, interestRate) {
+Number.mortgage = function(startingLoanAmount, totalPayments, interestRate) {
     let interestRatePerMonth = interestRate / 12;
     return startingLoanAmount * interestRatePerMonth * (Math.pow(1 + interestRatePerMonth, totalPayments)) / (Math.pow(1 + interestRatePerMonth, totalPayments) - 1);
 }
