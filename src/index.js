@@ -74,7 +74,3 @@ Number.mortgage = function(startingLoanAmount, totalPayments, interestRate) {
 Number.prototype.intToHex = function() {
     return this.toString(16)
 }
-
-// Challenge 11 - Random Functions 
-
-
